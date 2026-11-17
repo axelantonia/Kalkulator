@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="+"
-                android:backgroundTint="#5277D9"
+                android:backgroundTint="#6B7280"
                 android:textColor="#FFFFFF"/>
 
             <Button
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="-"
-                android:backgroundTint="#5277D9"
+                android:backgroundTint="#6B7280"
                 android:textColor="#FFFFFF"/>
 
             <Button
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="*"
-                android:backgroundTint="#5277D9"
+                android:backgroundTint="#6B7280"
                 android:textColor="#FFFFFF"/>
 
             <Button
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="/"
-                android:backgroundTint="#5277D9"
+                android:backgroundTint="#6B7280"
                 android:textColor="#FFFFFF"/>
 
         </LinearLayout>
@@ -95,11 +95,17 @@
 
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container"
+    <ScrollView
+        android:id="@+id/svHistory"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp">
 
+        <LinearLayout
+            android:id="@+id/llHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 </LinearLayout>
