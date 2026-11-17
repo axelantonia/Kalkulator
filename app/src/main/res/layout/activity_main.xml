@@ -25,7 +25,7 @@
             android:inputType="numberDecimal|numberSigned"
             android:textColor="#FFFFFF"
             android:textColorHint="#AAB4C3"
-            android:backgroundTint="#668CFF"/>
+            android:backgroundTint="#668CFF" />
 
         <EditText
             android:id="@+id/Angka2"
@@ -35,7 +35,7 @@
             android:inputType="numberDecimal|numberSigned"
             android:textColor="#FFFFFF"
             android:textColorHint="#AAB4C3"
-            android:backgroundTint="#668CFF"/>
+            android:backgroundTint="#668CFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:text="+"
                 android:backgroundTint="#6B7280"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnKurang"
@@ -59,7 +59,7 @@
                 android:layout_weight="1"
                 android:text="-"
                 android:backgroundTint="#6B7280"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnKali"
@@ -68,7 +68,7 @@
                 android:layout_weight="1"
                 android:text="*"
                 android:backgroundTint="#6B7280"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnBagi"
@@ -77,7 +77,7 @@
                 android:layout_weight="1"
                 android:text="/"
                 android:backgroundTint="#6B7280"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
@@ -91,21 +91,15 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:background="#303E55"/>
+            android:background="#303E55" />
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/History"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp" />
 
-        <LinearLayout
-            android:id="@+id/History"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
 </LinearLayout>
