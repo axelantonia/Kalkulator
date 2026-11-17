@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:background="#5E3A66"
-    android:elevation="3dp"
+    android:layout_height="match_parent"
+    android:background="#202B3C"
     android:orientation="vertical"
     android:padding="12dp">
 
     <TextView
-        android:id="@+id/tvJudul"
+        android:id="@+id/Judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BAGI"
-        android:textColor="#AAB4C3"
+        android:text="Riwayat:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ListView
