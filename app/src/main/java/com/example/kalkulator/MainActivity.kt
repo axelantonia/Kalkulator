@@ -13,12 +13,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
-
     private val riwayat = ArrayList<String>()
-
-    private lateinit var etAngka1: EditText
-    private lateinit var etAngka2: EditText
-    private lateinit var tvHasil: TextView
+    private lateinit var Angka1: EditText
+    private lateinit var Angka2: EditText
+    private lateinit var Hasil: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +28,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        etAngka1 = findViewById(R.id.Angka1)
-        etAngka2 = findViewById(R.id.Angka2)
-        tvHasil = findViewById(R.id.Hasil)
+        Angka1 = findViewById(R.id.Angka1)
+        Angka2 = findViewById(R.id.Angka2)
+        Hasil = findViewById(R.id.Hasil)
+
 
         val btnTambah = findViewById<Button>(R.id.btnTambah)
         val btnKurang = findViewById<Button>(R.id.btnKurang)
@@ -58,39 +57,40 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hitung(operasi: String) {
-        val angka1 = etAngka1.text.toString().toDoubleOrNull()
-        val angka2 = etAngka2.text.toString().toDoubleOrNull()
+        val nilai1 = Angka1.text.toString().toDoubleOrNull()
+        val nilai2 = Angka2.text.toString().toDoubleOrNull()
 
-        if (angka1 == null || angka2 == null) {
+        if (nilai1 == null || nilai2 == null) {
             Toast.makeText(this, "Isi kedua angka dengan benar", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (operasi == "/" && angka2 == 0.0) {
+        if (operasi == "/" && nilai2 == 0.0) {
             Toast.makeText(this, "Tidak bisa dibagi dengan 0", Toast.LENGTH_SHORT).show()
             return
         }
 
         val hasil: Double
         if (operasi == "+") {
-            hasil = angka1 + angka2
+            hasil = nilai1 + nilai2
         } else if (operasi == "-") {
-            hasil = angka1 - angka2
+            hasil = nilai1 - nilai2
         } else if (operasi == "*") {
-            hasil = angka1 * angka2
+            hasil = nilai1 * nilai2
         } else {
-            hasil = angka1 / angka2
+            hasil = nilai1 / nilai2
         }
 
-        tvHasil.text = "Hasil : $hasil"
+
+        Hasil.text = "Hasil : $hasil"
 
         if (hasil < 0) {
-            tvHasil.setBackgroundColor(Color.RED)
+            Hasil.setBackgroundColor(Color.RED)
         } else {
-            tvHasil.setBackgroundColor(Color.parseColor("#303E55"))
+            Hasil.setBackgroundColor(Color.parseColor("#303E55"))
         }
 
-        riwayat.add("$angka1 $operasi $angka2 = $hasil")
+        riwayat.add("$nilai1 $operasi $nilai2 = $hasil")
 
         if (operasi == "+") {
             replaceFragment(tambah())
